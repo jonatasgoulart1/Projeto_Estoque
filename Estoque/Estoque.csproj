@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA4F926E-F0DD-4CFC-8480-7E8D1B33972D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Estoque</RootNamespace>
+    <AssemblyName>Estoque</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\FrmTemplateBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\FrmTemplateBase.Designer.cs">
+      <DependentUpon>FrmTemplateBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BLL_Classes.cs" />
+    <Compile Include="BLL\BLL_Conexao.cs" />
+    <Compile Include="BLL\BLL_Departamentos.cs" />
+    <Compile Include="BLL\BLL_Familias.cs" />
+    <Compile Include="BLL\BLL_Fornecedores.cs" />
+    <Compile Include="BLL\BLL_Grupos.cs" />
+    <Compile Include="BLL\BLL_Movimentos.cs" />
+    <Compile Include="BLL\BLL_Parametros.cs" />
+    <Compile Include="BLL\BLL_Produtos.cs" />
+    <Compile Include="BLL\BLL_Tipo_Movimento.cs" />
+    <Compile Include="BLL\BLL_Usuarios.cs" />
+    <Compile Include="Derivadas\FrmCadClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadClasses.Designer.cs">
+      <DependentUpon>FrmCadClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadDepartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadDepartamentos.Designer.cs">
+      <DependentUpon>FrmCadDepartamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadFamilias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadFamilias.Designer.cs">
+      <DependentUpon>FrmCadFamilias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadFornecedores.Designer.cs">
+      <DependentUpon>FrmCadFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadGrupos.Designer.cs">
+      <DependentUpon>FrmCadGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadMovimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadMovimentos.Designer.cs">
+      <DependentUpon>FrmCadMovimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadParametros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadParametros.Designer.cs">
+      <DependentUpon>FrmCadParametros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadProdutos.Designer.cs">
+      <DependentUpon>FrmCadProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Derivadas\FrmCadUsuarios.Designer.cs">
+      <DependentUpon>FrmCadUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Derivadas\FrmTipoMovimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Derivadas\FrmTipoMovimento.Designer.cs">
+      <DependentUpon>FrmTipoMovimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Base\FrmTemplateBase.resx">
+      <DependentUpon>FrmTemplateBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Derivadas\FrmCadClasses.resx">
+      <DependentUpon>FrmCadClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Derivadas\FrmCadDepartamentos.resx">
+      <DependentUpon>FrmCadDepartamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Derivadas\FrmCadFamilias.resx">
+      <DependentUpon>FrmCadFamilias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Derivadas\FrmCadFornecedores.resx">
+      <DependentUpon>FrmCadFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Derivadas\FrmCadGrupos.resx">
+      <DependentUpon>FrmCadGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Derivadas\FrmCadMovimentos.resx">
+      <DependentUpon>FrmCadMovimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Derivadas\FrmCadParametros.resx">
+      <DependentUpon>FrmCadParametros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Derivadas\FrmCadProdutos.resx">
+      <DependentUpon>FrmCadProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Derivadas\FrmCadUsuarios.resx">
+      <DependentUpon>FrmCadUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Derivadas\FrmTipoMovimento.resx">
+      <DependentUpon>FrmTipoMovimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estoque2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bd_Estoque.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Bd_Estoque_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Bd_Estoque.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\Confirmar.png" />
+    <None Include="Resources\Cancelar.png" />
+    <None Include="Resources\Excluir.png" />
+    <None Include="Resources\Editar.png" />
+    <None Include="Resources\Novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
