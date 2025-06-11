@@ -101,11 +101,11 @@ namespace Estoque.BLL
             return msg;
         }
 
-        public string EditarDepartamentos(int departamentoId, string varDescricao)
+        public string AlterarDepartamento(int departamentoId, string varDescricao)
         {
             string msg = string.Empty;
             conexao = conexaoBD.AbrirBanco();
-            SqlCommand cmd = new SqlCommand("DALEditarDepartamentos", conexao);
+            SqlCommand cmd = new SqlCommand("DALAlterarDepartamentos", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = conexao;
 

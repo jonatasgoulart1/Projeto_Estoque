@@ -152,7 +152,7 @@ namespace Estoque.Derivadas
                 DataRowView linha =
                (DataRowView)GridLista.Rows[GridLista.SelectedRows[0].Index].DataBoundItem;
                 if (MessageBox.Show(string.Format("Deseja Excluir {0}?",
-               linha["Parametro"]), "Atenção",
+               linha["FornecedorID"]), "Atenção",
                MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {

@@ -81,7 +81,7 @@ namespace Estoque.Derivadas
             {
                 if (LblDepartamentoId.Text != "")
 
-                    Mensagem = MeuAdapterDepartamentos.EditarDepartamentos(
+                    Mensagem = MeuAdapterDepartamentos.AlterarDepartamento(
                         Convert.ToInt32(LblDepartamentoId.Text), txtDescricao.Text);
 
                 else Mensagem = MeuAdapterDepartamentos.InserirDepartamentos(txtDescricao.Text);

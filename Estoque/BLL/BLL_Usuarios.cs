@@ -152,7 +152,7 @@ namespace Estoque.BLL
             cmd.Connection = conexao;
 
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@GrupoId", varGrupoId);
+            cmd.Parameters.AddWithValue("@UsuarioID", varGrupoId);
 
             try
             {
