@@ -22,6 +22,7 @@ namespace Estoque.Derivadas
             GridLista.Columns[0].DataPropertyName = "Descricao";
             GridLista.Columns[0].HeaderText = "Descrição do Produto";
 
+
             MeuAdapterProdutos.MontarLista("");
             ExibirTitulo("Cadastro dos Produtos");
             GridLista.DataSource = MeuAdapterProdutos.DtProdutos;
@@ -57,6 +58,7 @@ namespace Estoque.Derivadas
                 dtpDataCadastro.Text = linha["Data_Cadastro"].ToString();
                 dtpUltCompra.Text = linha["DataUltCompra"].ToString();
                 cmbSituacao.Text = linha["Situacao"].ToString();
+                TxtLocalArmazenamento.Text = linha["Local_Armazenamento"].ToString();
             }
 
             base.GridLista_SelectionChanged(sender, e);
@@ -133,22 +135,22 @@ namespace Estoque.Derivadas
                 if (LblProdutoId.Text != "")
                 {
                     int produtoId = Convert.ToInt32(LblProdutoId.Text);
-                    Mensagem = MeuAdapterProdutos.AlterarProdutos(
-                        TxtCodigo.Text, TxtDescricao.Text, TxtUnidade.Text,
-                        pesoBruto, pesoLiquido,
-                        classe, grupo, familia, departamento,
-                        qtdeSaldo, custoMedio, valorSaldo,
-                        dataCadastro, cmbSituacao.Text, dataUltCompra, produtoId);
+                      Mensagem = MeuAdapterProdutos.AlterarProdutos(
+                     TxtCodigo.Text, TxtDescricao.Text, TxtUnidade.Text,
+                    pesoBruto, pesoLiquido,
+                     classe, grupo, familia, departamento,
+                     qtdeSaldo, custoMedio, valorSaldo,
+                     dataCadastro, cmbSituacao.Text, dataUltCompra,
+                      TxtLocalArmazenamento.Text, produtoId);
                 }
                 else
                 {
-                    Mensagem = MeuAdapterProdutos.InserirProdutos
-                        (
-                        TxtCodigo.Text, TxtDescricao.Text, TxtUnidade.Text,
-                        pesoBruto, pesoLiquido,
-                        classe, grupo, familia, departamento,
-                        qtdeSaldo, custoMedio, valorSaldo,
-                        dataCadastro, cmbSituacao.Text, dataUltCompra);
+                    Mensagem = MeuAdapterProdutos.InserirProdutos(
+                     TxtCodigo.Text, TxtDescricao.Text, TxtUnidade.Text,
+                     pesoBruto, pesoLiquido,
+                     classe, grupo, familia, departamento,
+                     qtdeSaldo, custoMedio, valorSaldo,
+                     dataCadastro, cmbSituacao.Text, dataUltCompra, TxtLocalArmazenamento.Text);
 
 
                 }

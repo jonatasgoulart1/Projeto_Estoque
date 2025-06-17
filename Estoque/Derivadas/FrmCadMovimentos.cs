@@ -94,6 +94,7 @@ namespace Estoque.Derivadas
             string Mensagem = "";
 
             if (string.IsNullOrEmpty(cmbProduto.Text) ||
+                string.IsNullOrEmpty(dtpDataDocumento.Text)||
                 string.IsNullOrEmpty(txtNrDocumento.Text) ||
                 string.IsNullOrEmpty(txtSequencia.Text) ||
                 string.IsNullOrEmpty(TxtTipoMov.Text) ||
@@ -113,7 +114,7 @@ namespace Estoque.Derivadas
             else
             {
 
-                 int produto = Convert.ToInt32(cmbProduto.Text);
+                int produto = Convert.ToInt32(cmbProduto.Text);
                 int nrDocumento = Convert.ToInt32(txtNrDocumento.Text);
                 DateTime dataDocumento = Convert.ToDateTime(dtpDataDocumento.Text);
                 int sequencia = Convert.ToInt32(txtSequencia.Text);
@@ -161,13 +162,6 @@ namespace Estoque.Derivadas
                         fornecedor);
                 }
 
-                if (Mensagem != "")
-                    MessageBox.Show(Mensagem, "Atenção!");
-
-                LimparCampos();
-                MeuAdapterMovimentos.MontarLista("");
-                GridLista.DataSource = MeuAdapterMovimentos.DtMovimentos;
-                base.BtnConfirmar_Click(sender, e);
                 if (Mensagem != "") MessageBox.Show(Mensagem, "Atenção!");
 
                 LimparCampos();
@@ -175,6 +169,8 @@ namespace Estoque.Derivadas
                 GridLista.DataSource = MeuAdapterMovimentos.DtMovimentos;
                 base.BtnConfirmar_Click(sender, e);
             }
+                         
+          
         }
         public override void BtnExcluir_Click(object sender, EventArgs e)
         {

@@ -47,6 +47,8 @@ namespace Estoque.BLL
 
             public DateTime DataUltCompra { get; set; }
 
+            public string Local_Armazenamento { get; set; }
+
             public Produtos produtos { get; set; }
         }
         public string MontarLista(string varValor)
@@ -102,7 +104,8 @@ namespace Estoque.BLL
               decimal varValorSaldo,
               DateTime varDataCadastro,
               string varSituacao,
-              DateTime varDataUltCompra)
+              DateTime varDataUltCompra,
+               string varLocalArmazenamento)
         {
             string msg = string.Empty;
             try
@@ -127,6 +130,7 @@ namespace Estoque.BLL
                     cmd.Parameters.AddWithValue("@Data_Cadastro", varDataCadastro);
                     cmd.Parameters.AddWithValue("@Situacao", varSituacao);
                     cmd.Parameters.AddWithValue("@DataUltCompra", varDataUltCompra);
+                    cmd.Parameters.AddWithValue("@Local_Armazenamento", varLocalArmazenamento);
 
                     cmd.ExecuteNonQuery();
                     msg = "Registro Inserido com Sucesso!";
@@ -167,6 +171,7 @@ namespace Estoque.BLL
             DateTime varDataCadastro,
             string varSituacao,
             DateTime varDataUltCompra,
+             string varLocalArmazenamento,
              int ProdutoId)
         {
             string msg = string.Empty;
@@ -192,6 +197,7 @@ namespace Estoque.BLL
                     cmd.Parameters.AddWithValue("@Data_Cadastro", varDataCadastro);
                     cmd.Parameters.AddWithValue("@Situacao", varSituacao);
                     cmd.Parameters.AddWithValue("@DataUltCompra", varDataUltCompra);
+                    cmd.Parameters.AddWithValue("@Local_Armazenamento", varLocalArmazenamento);
                     cmd.Parameters.AddWithValue("@ProdutoId", ProdutoId);
 
                     cmd.ExecuteNonQuery();

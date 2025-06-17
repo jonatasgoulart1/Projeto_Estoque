@@ -78,6 +78,7 @@
     <Compile Include="BLL\BLL_Produtos.cs" />
     <Compile Include="BLL\BLL_Tipo_Movimento.cs" />
     <Compile Include="BLL\BLL_Usuarios.cs" />
+    <Compile Include="BLL\BLL_Valorizacao.cs" />
     <Compile Include="Derivadas\FrmCadClasses.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -12,7 +12,7 @@ namespace Estoque.BLL
     {
         public SqlConnection AbrirBanco()
         {
-            SqlConnection conexao = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Tecnico em Informatica\Estoque_XX\Estoque\Bd_Estoque.mdf"";Integrated Security=True;Connect Timeout=30");
+            SqlConnection conexao = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""G:\Tecnico em Informatica\Backup projeto estoque\Estoque_XX\Estoque\Bd_Estoque.mdf"";Integrated Security=True;Connect Timeout=30");
 
 
             SqlCommand cmd = new SqlCommand();

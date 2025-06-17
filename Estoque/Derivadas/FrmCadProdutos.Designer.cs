@@ -54,6 +54,7 @@
             this.lblDataUltCompra = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.TxtCodigo = new System.Windows.Forms.TextBox();
+            this.TxtLocalArmazenamento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtPesoLiquido = new System.Windows.Forms.TextBox();
             this.TxtPesoBruto = new System.Windows.Forms.TextBox();
@@ -61,6 +62,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dtpDataCadastro = new System.Windows.Forms.MaskedTextBox();
             this.dtpUltCompra = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.PnlLista.SuspendLayout();
             this.PnlCadastro.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +75,8 @@
             // 
             // PnlCadastro
             // 
+            this.PnlCadastro.Controls.Add(this.label4);
+            this.PnlCadastro.Controls.Add(this.TxtLocalArmazenamento);
             this.PnlCadastro.Controls.Add(this.dtpUltCompra);
             this.PnlCadastro.Controls.Add(this.dtpDataCadastro);
             this.PnlCadastro.Controls.Add(this.label3);
@@ -334,6 +338,14 @@
             this.TxtCodigo.TabIndex = 26;
             this.toolTip1.SetToolTip(this.TxtCodigo, "Digite a Descrição do Produto");
             // 
+            // TxtLocalArmazenamento
+            // 
+            this.TxtLocalArmazenamento.Location = new System.Drawing.Point(385, 454);
+            this.TxtLocalArmazenamento.Name = "TxtLocalArmazenamento";
+            this.TxtLocalArmazenamento.Size = new System.Drawing.Size(232, 26);
+            this.TxtLocalArmazenamento.TabIndex = 33;
+            this.toolTip1.SetToolTip(this.TxtLocalArmazenamento, "Inserir Custo Medio do Produto");
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -400,6 +412,15 @@
             this.dtpUltCompra.TabIndex = 32;
             this.dtpUltCompra.ValidatingType = typeof(System.DateTime);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(381, 432);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(179, 19);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Local Armazenamento";
+            // 
             // FrmCadProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -450,5 +471,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox dtpUltCompra;
         private System.Windows.Forms.MaskedTextBox dtpDataCadastro;
+        private System.Windows.Forms.TextBox TxtLocalArmazenamento;
+        private System.Windows.Forms.Label label4;
     }
 }
